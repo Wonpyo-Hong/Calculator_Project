@@ -1,0 +1,56 @@
+/* 모든 요소에 box-sizing 속성을 적용하여 너비와 패딩을 포함한 총 너비를 계산하도록 합니다. */
+* {
+  box-sizing: border-box;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.screen {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: right;
+  font-size: 2em;
+  /* 화면 내용이 테두리를 넘어가지 않도록 overflow 속성을 추가합니다. */
+  overflow: hidden;
+}
+
+.calculator-buttons-row {
+  display: flex;
+  justify-content: center; /* 버튼을 가운데 정렬합니다. */
+  flex-wrap: wrap;
+  width: 100%; /* 행의 너비를 계산기 너비에 맞춥니다. */
+}
+
+.calculator-button {
+  width: calc(24% - 10px); /* 전체 너비의 25%에서 양쪽 마진을 빼줍니다. */
+  margin: 5px; /* 버튼 사이의 간격을 설정합니다. */
+  padding: 20px 0; /* 버튼의 높이를 지정합니다. */
+  font-size: 1em; /* 글자 크기를 1em으로 조정합니다. */
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* 기능 버튼의 스타일을 조정합니다. */
+.calculator-button.function {
+  background-color: #f0b67f;
+}
+
+.calculator-button:hover {
+  background-color: #d9d9d9;
+}
+
+
